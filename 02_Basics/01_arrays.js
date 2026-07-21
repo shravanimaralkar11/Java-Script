@@ -15,7 +15,7 @@ const myHeros = ["Thanos", "Hulk", "SpiderMan", "Thor"]
 // myArr.pop()
 
 // myArr.unshift(9)  //Add This value to the start of the array
-// myArr.shift()
+// myArr.shift() //Remove value from the beginning
 
 // console.log(myArr.includes(9));  //Result is in boolean
 // console.log(myArr.indexOf(9)); //Gives -1 as it is not present
