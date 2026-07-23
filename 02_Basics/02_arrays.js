@@ -18,16 +18,16 @@ const combine_arr = anthor_arr.flat(Infinity) //This will convert into only one 
 
 // console.log(combine_arr);
 
-console.log(Array.isArray("shravani"));
-console.log(Array.from("shravani"));
-console.log(Array.from({name : "Shravani"})); //gives empty dict we have to say on whic base we want array 
+// console.log(Array.isArray("shravani"));
+// console.log(Array.from("shravani"));
+// console.log(Array.from({name : "Shravani"})); //gives empty dict we have to say on whic base we want array 
 
 
 let s1 = 100
 let s2 = 200
 let s3 = 300
 
-console.log(Array.of(s1,s2,s3));
+// console.log(Array.of(s1,s2,s3));
 
 
 
