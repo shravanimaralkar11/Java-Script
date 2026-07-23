@@ -57,17 +57,41 @@ const users = [
 
 // console.log(users[1].email);
 
-console.log(tinderUser);
-console.log(Object.keys(tinderUser)); // Only key
-console.log(Object.values(tinderUser)); // Only value
-console.log(Object.entries(tinderUser)); // Both key : value
+// console.log(tinderUser);
+// console.log(Object.keys(tinderUser)); // Only key
+// console.log(Object.values(tinderUser)); // Only value
+// console.log(Object.entries(tinderUser)); // Both key : value
 
-console.log(users);
-console.log(Object.keys(users));
-console.log(Object.values(users));
-console.log(Object.entries(users));
+// console.log(users);
+// console.log(Object.keys(users));
+// console.log(Object.values(users));
+// console.log(Object.entries(users));
 
-console.log(tinderUser.hasOwnProperty('isLoggedIn')); // Check if key exist
+// console.log(tinderUser.hasOwnProperty('isLoggedIn')); // Check if key exist
 
 
 
+const course = {
+    courseName : "Js in hindi",
+    price : "999",
+    courseInstructor : "hitesh"
+}
+
+// course.courseInstructor // We have to repeatedly write the course. course. so instead do follwong
+
+const {courseInstructor: instructor} = course //destructuring
+// console.log(courseInstructor);
+console.log(instructor);  
+
+// JSON data
+// {
+//     "Name" : "Shravani",
+//     "Age" : 20,
+//     "Branch" : "AI-DS"
+// }
+
+[
+    {},
+    {},
+    {}
+]
