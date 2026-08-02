@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    #card{
+        width: 300px;
+        background-color: black;
+        text-align: center;
+    }
+    #avatar{
+        border-radius : 50%;
+        margin-top: 10px;
+        height: 150px;
+        width: 150px;
+        object-fit: cover; 
+    }
+    #name{
+        color:#fff;
+        margin: 10px 0 2px 0;
+    }
+    #followers{
+        color:#fff;
+        margin-top: 0;
+    }
+</style>
+<body style="background-color: #212121;">
+    <!-- 0	UNSENT	Client has been created. open() not called yet.
+    1	OPENED	open() has been called.
+    2	HEADERS_RECEIVED	send() has been called, and headers and status are available.
+    3	LOADING	Downloading; responseText holds partial data.
+    4	DONE	The operation is complete. -->
+    <button id="btn">Click for more Info</button>
+
+    <div id="card", style="display: none;"> 
+        <img id="avatar" src="" alt="Profile"> 
+        <h2 id="name"></h2> 
+        <p id="followers"></p> 
+    </div>
+</body>
+<script>
+    const requestUrl = 'https://api.github.com/users/Krish-Makadiya'
+    const xhr =  new XMLHttpRequest();
+    xhr.open('GET', requestUrl)
+    let data
+    xhr.onreadystatechange = function(){
+        console.log(xhr.readyState);
+        if(xhr.readyState === 4){
+            data = JSON.parse(this.responseText) 
+            // console.log(data);
+            // console.log(typeof data);            
+            // console.log(data.followers);   
+            // console.log(data.avatar_url); 
+        }
+    }
+    xhr.send();
+
+    const btn = document.getElementById('btn');
+    btn.addEventListener('click', function(){
+        const card = document.getElementById('card');
+        document.querySelector('#avatar').src = data.avatar_url
+        document.querySelector('#name').textContent = data.name
+        document.querySelector('#followers').textContent = `Followers: ${data.followers}`
+        card.style.display = 'block'
+    })  
+</script>
+</html>
+
